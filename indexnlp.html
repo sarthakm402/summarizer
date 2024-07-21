@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarizer</title>
+</head>
+<body>
+    <h1>Upload a file to summarize</h1>
+    <form action="/summarize" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br><br>
+        <label for="summary-type">Choose summarization type:</label>
+        <select name="summary_type" id="summary-type" required>
+            <option value="extractive">Extractive</option>
+            <option value="abstractive">Abstractive</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Summarize">
+    </form>
+
+    {% if result %}
+    <h2>Summary Result</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarizer</title>
+</head>
+<body>
+    <h1>Summarizer</h1>
+    
+    <h2>Summarize from File</h2>
+    <form action="/summarize_file" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br><br>
+        <label for="summary-type-file">Choose summarization type:</label>
+        <select name="summary_type" id="summary-type-file" required>
+            <option value="extractive">Extractive</option>
+            <option value="abstractive">Abstractive</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Summarize from File">
+    </form>
+
+    <hr>
+
+    <h2>Summarize from Text</h2>
+    <form action="/summarize_text" method="post">
+        <textarea name="text" rows="10" cols="80" placeholder="Enter text to summarize..." required></textarea>
+        <br><br>
+        <label for="summary-type-text">Choose summarization type:</label>
+        <select name="summary_type" id="summary-type-text" required>
+            <option value="extractive">Extractive</option>
+            <option value="abstractive">Abstractive</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Summarize from Text">
+    </form>
+
+    {% if result_file %}
+    <h2>Summary Result from File</h2>
+    <p>{{ result_file }}</p>
+    {% endif %}
+
+    {% if result_text %}
+    <h2>Summary Result from Text</h2>
+    <p>{{ result_text }}</p>
+    {% endif %}
+</body>
+</html>
+
