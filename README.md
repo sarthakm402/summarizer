@@ -1,7 +1,7 @@
 # Flask Summarization Application
 
 This is a Flask web application that provides text summarization services. The application allows users to upload text or PDF files and generate summaries using extractive or abstractive methods. It also supports summarizing text input directly through the web interface.
-
+ 
 ## Features 
  
 - **File Upload Support**: Upload `.txt` and `.pdf` files for summarization.
