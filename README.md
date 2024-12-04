@@ -4,7 +4,7 @@ This is a Flask web application that provides text summarization services. The a
  
 ## Features 
  
-- **File Upload Support**: Upload  `.txt` and `.pdf` files for summarization.
+- **File Upload Support**: Upload `.txt` and `.pdf` files for summarization.
 - **Summarization Methods**:
   - **Extractive Summarization**: Extracts key sentences from text.
   - **Abstractive Summarization**: Generates a summary by paraphrasing the text.
